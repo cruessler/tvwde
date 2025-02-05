@@ -14,8 +14,6 @@ export const load: PageServerLoad = async () => {
     })
   );
 
-
-
   return {
     productions: newestThreeProductions
   };
