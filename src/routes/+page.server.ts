@@ -8,13 +8,15 @@ export const load: PageServerLoad = async () => {
   const newestThreeProductions = await directus.request(
     readItems('productions', {
       filter: { status: { _eq: 'published' } },
-      sort: ['-date_created'],
-      fields: ['id', 'title_de', 'date_created'],
+      sort: ['events.start_date'],
+      fields: ['id', 'title_de', 'date_created', { events: ['start_date', 'start_time'] }],
       limit: 3
     })
   );
 
+
+
   return {
-    posts: newestThreeProductions
+    productions: newestThreeProductions
   };
 };
