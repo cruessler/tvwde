@@ -5,7 +5,7 @@
 
 <nav class="bg-tvw-accent text-tvw-primary p-2">
   <menu class="flex flex-row space-x-4">
-    <li>Start</li>
+    <li><a href="/">Start</a></li>
     <li>Nachwuchsförderung</li>
   </menu>
 </nav>
