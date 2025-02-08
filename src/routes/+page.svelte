@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { PageProps } from './$types';
-  import { formatStartDateTime, getEventStartDateTimeParts } from '$lib/date-times';
+  import { getEventStartDateTimeParts } from '$lib/date-times';
 
   let { data }: PageProps = $props();
 

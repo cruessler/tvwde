@@ -7,6 +7,14 @@ export const formatStartDateTime = (startDate: string, startTime: string) => {
   }).format(startDateTime);
 };
 
+export const formatStartTime = (startDate: string, startTime: string) => {
+  const startDateTime = new Date(`${startDate}T${startTime}`);
+
+  return new Intl.DateTimeFormat(['de-DE'], {
+    timeStyle: 'short'
+  }).format(startDateTime);
+};
+
 export const getEventStartDateTimeParts = (startDate: string, startTime: string) => {
   const startDateTime = new Date(`${startDate}T${startTime}`);
 
@@ -26,4 +34,18 @@ export const getEventStartDateTimeParts = (startDate: string, startTime: string)
   const minute = getPart('minute');
 
   return { weekday, day, month, hour, minute };
+};
+
+export const getCurrentYearAndMonth = () => {
+  const now = new Date();
+  const parts = new Intl.DateTimeFormat(['de-DE'], {
+    year: 'numeric',
+    month: '2-digit'
+  }).formatToParts(now);
+
+  const getPart = (type: string) => {
+    return parts.find((part) => part.type === type).value;
+  };
+
+  return { year: getPart('year'), month: getPart('month') };
 };

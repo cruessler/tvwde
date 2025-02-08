@@ -1,6 +1,10 @@
 <script lang="ts">
+  import { getCurrentYearAndMonth } from '$lib/date-times';
   import '../app.css';
+
   let { children } = $props();
+
+  const { year, month } = getCurrentYearAndMonth();
 </script>
 
 <header class="h-20 bg-slate-700 p-4">
@@ -18,7 +22,7 @@
 <footer class="w-[100vw] bg-slate-700 p-2 text-slate-50">
   <menu class="mb-4 grid grid-cols-2 space-y-1">
     <li class="row-start-1"><a href="/">Home</a></li>
-    <li class="row-start-2">Spielplan</li>
+    <li class="row-start-2"><a href="/events/{year}/{month}">Spielplan</a></li>
     <li class="row-start-3">Produktionen</li>
     <li class="row-start-4">Nachwuchsförderung</li>
     <li class="row-start-5">Über uns</li>
