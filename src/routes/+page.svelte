@@ -42,10 +42,36 @@
 
 <div class="mx-6 mb-8 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
 
-{#each data.productions as production}
-  <h2 class="mb-2 text-xl"><a href="/productions/{production.id}">{production.title_de}</a></h2>
+<div class="mx-6 mb-8 flex flex-row items-center">
+  <div class="text-xl font-bold">10 €–15 €</div>
 
-  {#each production.events as event}
-    <h3>{formatStartDateTime(event.start_date, event.start_time)}</h3>
-  {/each}
+  <a href="#" class="ml-auto rounded-sm border-red-200 bg-red-800 px-4 py-2 text-lg text-slate-100"
+    >Tickets</a
+  >
+</div>
+
+<h2 class="mx-6 mb-4 text-2xl">Produktionen im Fokus</h2>
+
+{#each data.productions as production}
+  <div class="relative mb-8 h-40 w-full bg-slate-200">
+    <div
+      class="absolute bottom-0 left-0 bg-red-600 px-2 py-1 text-lg font-bold text-slate-100 opacity-80"
+    >
+      Performance
+    </div>
+
+    Dies ist ein Platzhalter für ein Bild
+  </div>
+
+  <h2 class="mx-6 mb-2 text-xl">
+    <a href="/productions/{production.id}">{production.title_de}</a>
+  </h2>
+
+  <div class="mx-6 mb-8 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
+
+  <a
+    href="/productions/{production.id}"
+    class="mx-6 mb-6 block rounded-sm border-red-200 bg-red-800 px-4 py-2 text-lg text-slate-100"
+    >Infos & Termine</a
+  >
 {/each}
