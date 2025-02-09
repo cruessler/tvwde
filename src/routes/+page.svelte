@@ -31,7 +31,7 @@
 
   <div class="ml-auto self-center text-2xl">
     {nextEvent.hour}:{nextEvent.minute}
-    {nextProduction.title_de}
+    <a href="/productions/{nextProduction.id}">{nextProduction.title_de}</a>
   </div>
 </div>
 
