@@ -32,7 +32,7 @@ export const load: PageServerLoad = async ({ params }) => {
         }
       },
       sort: ['start_date'],
-      fields: ['start_date', 'start_time', { production_id: ['id', 'title_de'] }]
+      fields: ['start_date', 'start_time', { production_id: ['id', 'title_de', 'description_de'] }]
     })
   );
 

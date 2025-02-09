@@ -29,7 +29,7 @@
     >
   </div>
 
-  <div class="mx-6 mb-2 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
+  <div class="mx-6 mb-2 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
 
   <div class="mx-6 mb-8 flex flex-row items-center">
     <div class="text-xl font-bold">10 €–15 €</div>

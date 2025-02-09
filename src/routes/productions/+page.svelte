@@ -19,7 +19,7 @@
     <a href="/productions/{production.id}">{production.title_de}</a>
   </h2>
 
-  <div class="mx-6 mb-8 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
+  <div class="mx-6 mb-8 line-clamp-3 whitespace-pre-line">{production.description_de}</div>
 
   <a
     href="/productions/{production.id}"

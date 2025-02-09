@@ -9,7 +9,13 @@ export const load: PageServerLoad = async () => {
     readItems('productions', {
       filter: { status: { _eq: 'published' } },
       sort: ['events.start_date'],
-      fields: ['id', 'title_de', 'date_created', { events: ['start_date', 'start_time'] }],
+      fields: [
+        'id',
+        'title_de',
+        'description_de',
+        'date_created',
+        { events: ['start_date', 'start_time'] }
+      ],
       limit: 3
     })
   );

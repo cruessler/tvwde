@@ -40,7 +40,7 @@
   <span class="rounded-sm border-red-200 bg-red-800 px-2 py-1 text-slate-100">Premiere</span>
 </div>
 
-<div class="mx-6 mb-8 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
+<div class="mx-6 mb-8 line-clamp-3 whitespace-pre-line">{nextProduction.description_de}</div>
 
 <div class="mx-6 mb-8 flex flex-row items-center">
   <div class="text-xl font-bold">10 €–15 €</div>
@@ -67,7 +67,7 @@
     <a href="/productions/{production.id}">{production.title_de}</a>
   </h2>
 
-  <div class="mx-6 mb-8 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
+  <div class="mx-6 mb-8 line-clamp-3 whitespace-pre-line">{production.description_de}</div>
 
   <a
     href="/productions/{production.id}"

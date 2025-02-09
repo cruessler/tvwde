@@ -1,9 +1,6 @@
 <script lang="ts">
   import type { PageProps } from './$types';
-  import {
-    formatStartTime,
-    getEventStartDateTimeParts
-  } from '$lib/date-times';
+  import { formatStartTime, getEventStartDateTimeParts } from '$lib/date-times';
 
   let { data }: PageProps = $props();
 </script>
@@ -22,7 +19,7 @@
   <a href="/productions/{data.production.id}">{data.production.title_de}</a>
 </h2>
 
-<div class="mx-6 mb-8 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
+<div class="mx-6 mb-8 whitespace-pre-line">{data.production.description_de}</div>
 
 {#each data.production.events as event}
   {@const { weekday, day } = getEventStartDateTimeParts(event.start_date, event.start_time)}

@@ -8,7 +8,13 @@ export const load: PageServerLoad = async ({ params }) => {
   const production = await directus.request(
     readItem('productions', params.production, {
       filter: { status: { _eq: 'published' } },
-      fields: ['id', 'title_de', 'date_created', { events: ['start_date', 'start_time'] }]
+      fields: [
+        'id',
+        'title_de',
+        'description_de',
+        'date_created',
+        { events: ['start_date', 'start_time'] }
+      ]
     })
   );
 

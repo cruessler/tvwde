@@ -1,4 +1,3 @@
-
 import type { PageServerLoad } from './$types';
 import { createDirectus, rest, readItems, staticToken } from '@directus/sdk';
 import { env } from '$env/dynamic/private';
@@ -10,7 +9,13 @@ export const load: PageServerLoad = async () => {
     readItems('productions', {
       filter: { status: { _eq: 'published' } },
       sort: ['events.start_date'],
-      fields: ['id', 'title_de', 'date_created', { events: ['start_date', 'start_time'] }],
+      fields: [
+        'id',
+        'title_de',
+        'description_de',
+        'date_created',
+        { events: ['start_date', 'start_time'] }
+      ]
     })
   );
 
