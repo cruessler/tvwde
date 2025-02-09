@@ -13,6 +13,7 @@ export const load: PageServerLoad = async ({ params }) => {
         'title_de',
         'description_de',
         'date_created',
+        { images: ['title_de', 'image'] },
         { events: ['start_date', 'start_time'] }
       ]
     })

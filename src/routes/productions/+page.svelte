@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { mainImage } from '$lib/images.svelte';
   import type { PageProps } from './$types';
 
   let { data }: PageProps = $props();
@@ -12,7 +13,7 @@
       Performance
     </div>
 
-    Dies ist ein Platzhalter für ein Bild
+    {@render mainImage(production.images?.[0])}
   </div>
 
   <h2 class="mx-6 mb-2 text-xl">

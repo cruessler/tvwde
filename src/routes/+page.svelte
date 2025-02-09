@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageProps } from './$types';
   import { getEventStartDateTimeParts } from '$lib/date-times';
+  import { mainImage } from '$lib/images.svelte';
 
   let { data }: PageProps = $props();
 
@@ -19,7 +20,7 @@
     Theater Verlängertes Wohnzimmer
   </div>
 
-  Dies ist ein Platzhalter für ein Bild
+  {@render mainImage(nextProduction.images?.[0])}
 </div>
 
 <div class="mx-6 mb-4 flex flex-row">
@@ -60,7 +61,7 @@
       Performance
     </div>
 
-    Dies ist ein Platzhalter für ein Bild
+    {@render mainImage(production.images?.[0])}
   </div>
 
   <h2 class="mx-6 mb-2 text-xl">

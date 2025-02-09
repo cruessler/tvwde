@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { PageProps } from './$types';
   import { formatStartTime, getEventStartDateTimeParts } from '$lib/date-times';
+  import { mainImage } from '$lib/images.svelte';
 
   let { data }: PageProps = $props();
 </script>
@@ -12,7 +13,7 @@
     Performance
   </div>
 
-  Dies ist ein Platzhalter für ein Bild
+  {@render mainImage(data.production.images?.[0])}
 </div>
 
 <h2 class="mx-6 mb-2 text-xl">
