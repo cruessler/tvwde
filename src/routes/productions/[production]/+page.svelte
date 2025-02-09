@@ -1,12 +1,40 @@
 <script lang="ts">
   import type { PageProps } from './$types';
-  import { formatStartDateTime } from '$lib/date-times';
+  import {
+    formatStartTime,
+    getEventStartDateTimeParts
+  } from '$lib/date-times';
 
   let { data }: PageProps = $props();
 </script>
 
-<h1 class="mb-2 text-xl">{data.production.title_de}</h1>
+<div class="relative mb-8 h-40 w-full bg-slate-200">
+  <div
+    class="absolute bottom-0 left-0 bg-red-600 px-2 py-1 text-lg font-bold text-slate-100 opacity-80"
+  >
+    Performance
+  </div>
+
+  Dies ist ein Platzhalter für ein Bild
+</div>
+
+<h2 class="mx-6 mb-2 text-xl">
+  <a href="/productions/{data.production.id}">{data.production.title_de}</a>
+</h2>
+
+<div class="mx-6 mb-8 flex flex-row">Hier wird die Beschreibung des Stückes stehen.</div>
 
 {#each data.production.events as event}
-  <h3>{formatStartDateTime(event.start_date, event.start_time)}</h3>
+  {@const { weekday, day } = getEventStartDateTimeParts(event.start_date, event.start_time)}
+
+  <div class="mx-6 mb-2 flex flex-row">
+    <div class="flex flex-col items-center text-lg">
+      <div>{weekday}</div>
+      <div class="text-xl font-bold">{day}</div>
+    </div>
+
+    <div class="ml-auto self-center text-2xl">
+      {formatStartTime(event.start_date, event.start_time)}
+    </div>
+  </div>
 {/each}
