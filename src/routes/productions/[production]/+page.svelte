@@ -18,9 +18,13 @@
   {@render mainImage(data.production.images?.[0])}
 </div>
 
-<h2 class="mx-6 mb-4 text-4xl font-bold text-neutral-700">
+<h2 class="mx-6 mb-2 text-4xl font-bold text-neutral-700">
   <a href="/productions/{data.production.id}">{data.production.title_de}</a>
 </h2>
+
+<h3 class="mx-6 mb-4 line-clamp-3 text-lg font-bold text-neutral-700">
+  {data.production.subtitle_de}
+</h3>
 
 <div class="mx-6 mb-6">
   {#each data.production.categories as category}

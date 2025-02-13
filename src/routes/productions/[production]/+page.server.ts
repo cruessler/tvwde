@@ -11,6 +11,7 @@ export const load: PageServerLoad = async ({ params }) => {
       fields: [
         'id',
         'title_de',
+        'subtitle_de',
         'description_de',
         'date_created',
         'price_from',
