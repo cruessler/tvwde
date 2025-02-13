@@ -70,13 +70,13 @@
 </script>
 
 {#snippet characteristicChip(characteristic: Characteristic)}
-  <div class="w-32 rounded-xl {characteristicStyles[characteristic]} py-1 text-center text-zinc-50">
+  <div class="w-32 rounded-full {characteristicStyles[characteristic]} py-1 text-center text-zinc-50">
     {characteristics[characteristic]}
   </div>
 {/snippet}
 
 {#snippet categoryChip(category: Category)}
-  <div class="w-32 rounded-xl {categoryStyles[category]} py-1 text-center text-zinc-50">
+  <div class="w-32 rounded-full {categoryStyles[category]} py-1 text-center text-zinc-50">
     {categories[category]}
   </div>
 {/snippet}

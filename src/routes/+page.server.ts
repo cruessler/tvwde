@@ -18,6 +18,7 @@ export const load: PageServerLoad = async () => {
         'id',
         'title_de',
         'description_de',
+        'subtitle_de',
         'date_created',
         'price_from',
         'price_till',

@@ -16,7 +16,7 @@
 
 <div class="relative mb-8 h-80 w-full bg-slate-200">
   <div
-    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-6 py-4 text-lg font-bold text-zinc-50"
+    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-6 py-4 text-xl font-bold text-zinc-50"
   >
     Theater<br />
     Verlängertes Wohnzimmer
@@ -29,19 +29,19 @@
   />
 </div>
 
-<h2 class="mx-6 mb-4 text-xl font-bold text-neutral-700">Unsere nächste Veranstaltung</h2>
+<h2 class="mx-6 mb-2 text-xl font-bold text-neutral-700">Unsere nächste Veranstaltung</h2>
 
-<div class="mx-6 mb-4 text-base text-neutral-700">
+<div class="mx-6 mb-1 text-base text-neutral-700">
   {formatStartDate(nextEvent.start_date, nextEvent.start_time)}
 </div>
 
-<h1 class="mx-6 mb-4 text-2xl font-bold text-neutral-700">
+<h1 class="mx-6 mb-2 text-2xl font-bold text-neutral-700">
   {formatStartTime(nextEvent.start_date, nextEvent.start_time)}
 
-  <a href="/productions/{nextProduction.id}">{nextProduction.title_de}</a>
+  <a href="/productions/{nextProduction.id}" class="mx-2">{nextProduction.title_de}</a>
 </h1>
 
-<div class="mx-6 mb-6 flex flex-row space-x-2 text-sm">
+<div class="mx-6 mb-2 flex flex-row space-x-2 text-sm">
   {#each nextEvent.characteristics as characteristic}
     {@render characteristicChip(characteristic)}
   {/each}
@@ -51,8 +51,8 @@
   {/each}
 </div>
 
-<div class="mx-6 mb-8 line-clamp-3 text-base whitespace-pre-line">
-  {nextProduction.description_de}
+<div class="mx-6 mb-2 line-clamp-3 text-base whitespace-pre-line">
+  {nextProduction.subtitle_de}
 </div>
 
 <div class="mx-6 mb-8 flex flex-row items-center">
@@ -62,7 +62,7 @@
 
   <a
     href={nextEvent.tickets_website}
-    class="ml-auto block w-40 rounded-sm bg-red-900 px-4 py-1 text-center text-xl text-zinc-50"
+    class="ml-auto block w-50 rounded-sm bg-red-900 px-4 py-1 text-center text-xl text-zinc-50"
     >Tickets</a
   >
 </div>
