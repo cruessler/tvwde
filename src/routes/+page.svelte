@@ -73,7 +73,7 @@
   >Spielplan</a
 >
 
-<h2 class="mx-6 mb-4 text-2xl">Produktionen im Fokus</h2>
+<h2 class="mx-6 mb-4 text-2xl ">Produktionen im Fokus</h2>
 
 {#each data.productions as production}
   <div class="relative mb-4 h-50 w-full bg-slate-200">
@@ -86,7 +86,7 @@
     <a href="/productions/{production.id}">{production.title_de}</a>
   </h2>
 
-  <div class="mx-6 mb-6 line-clamp-3 whitespace-pre-line">{production.description_de}</div>
+  <div class="mx-6 mb-6 line-clamp-6 whitespace-pre-line">{production.description_de}</div>
 
   <a
     href="/productions/{production.id}"
