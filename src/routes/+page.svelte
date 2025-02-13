@@ -3,6 +3,7 @@
   import { formatStartDate, formatStartTime } from '$lib/date-times';
   import { mainImage } from '$lib/images.svelte';
   import { formatCurrency } from '$lib/currency';
+  import { categoryCaption, categoryChip, characteristicChip } from '$lib/chips.svelte';
 
   let { data }: PageProps = $props();
 
@@ -39,8 +40,13 @@
 </h1>
 
 <div class="mx-6 mb-6 flex flex-row space-x-2">
-  <span class="w-32 rounded-md bg-green-600 py-1 text-center text-zinc-50">Performance</span>
-  <span class="w-32 rounded-md bg-yellow-500 py-1 text-center text-zinc-50">Premiere</span>
+  {#each nextEvent.characteristics as characteristic}
+    {@render characteristicChip(characteristic)}
+  {/each}
+
+  {#each nextProduction.categories as category}
+    {@render categoryChip(category)}
+  {/each}
 </div>
 
 <div class="mx-6 mb-8 line-clamp-3 whitespace-pre-line">{nextProduction.description_de}</div>
@@ -61,11 +67,7 @@
 
 {#each data.productions as production}
   <div class="relative mb-8 h-50 w-full bg-slate-200">
-    <div
-      class="absolute bottom-0 left-0 bg-red-900/85 px-8 py-2 text-lg font-bold text-slate-100 opacity-80"
-    >
-      Performance
-    </div>
+    {@render categoryCaption(production.categories[0])}
 
     {@render mainImage(production.images?.[0])}
   </div>

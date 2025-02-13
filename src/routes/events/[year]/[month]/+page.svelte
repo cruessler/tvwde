@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { categoryChip, characteristicChip } from '$lib/chips.svelte';
   import { formatCurrency } from '$lib/currency';
   import { formatStartDate, formatStartTime } from '$lib/date-times';
   import type { PageProps } from './$types';
@@ -32,9 +33,14 @@
     <a href="/productions/{event.production_id.id}">{event.production_id.title_de}</a>
   </h1>
 
-  <div class="mx-6 mb-6 flex flex-row space-x-2">
-    <span class="w-32 rounded-md bg-green-600 py-1 text-center text-zinc-50">Performance</span>
-    <span class="w-32 rounded-md bg-yellow-500 py-1 text-center text-zinc-50">Premiere</span>
+  <div class="mx-6 mb-6 flex flex-row flex-wrap space-y-1 space-x-2">
+    {#each event.characteristics as characteristic}
+      {@render characteristicChip(characteristic)}
+    {/each}
+
+    {#each event.production_id.categories as category}
+      {@render categoryChip(category)}
+    {/each}
   </div>
 
   <div class="mx-6 mb-8 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>

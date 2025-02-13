@@ -15,6 +15,7 @@ export const load: PageServerLoad = async ({ params }) => {
         'date_created',
         'price_from',
         'price_till',
+        'categories',
         { images: ['title_de', 'image'] },
         { events: ['start_date', 'start_time'] }
       ]

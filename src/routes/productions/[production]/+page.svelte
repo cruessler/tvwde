@@ -3,6 +3,7 @@
   import { formatStartTime, formatStartDate } from '$lib/date-times';
   import { formatCurrency } from '$lib/currency';
   import { mainImage } from '$lib/images.svelte';
+  import { categoryChip } from '$lib/chips.svelte';
 
   let { data }: PageProps = $props();
 </script>
@@ -22,7 +23,9 @@
 </h2>
 
 <div class="mx-6 mb-6">
-  <div class="w-32 rounded-md bg-green-600 py-1 text-center text-zinc-50">Performance</div>
+  {#each data.production.categories as category}
+    {@render categoryChip(category)}
+  {/each}
 </div>
 
 <div class="mx-6 mb-8 whitespace-pre-line text-neutral-700">{data.production.description_de}</div>
