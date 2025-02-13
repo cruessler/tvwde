@@ -18,7 +18,7 @@
   {@render mainImage(data.production.images?.[0])}
 </div>
 
-<h2 class="mx-6 mb-2 text-4xl font-bold text-neutral-700">
+<h2 class="mx-6 mb-2 text-3xl font-bold text-neutral-700">
   <a href="/productions/{data.production.id}">{data.production.title_de}</a>
 </h2>
 
@@ -26,22 +26,22 @@
   {data.production.subtitle_de}
 </h3>
 
-<div class="mx-6 mb-6">
+<div class="mx-6 mb-6 text-sm">
   {#each data.production.categories as category}
     {@render categoryChip(category)}
   {/each}
 </div>
 
-<div class="mx-6 mb-8 whitespace-pre-line text-neutral-700">{data.production.description_de}</div>
+<div class="mx-6 mb-4 whitespace-pre-line text-neutral-700">{data.production.description_de}</div>
 
-<div class="mx-6 mb-8 text-2xl font-bold text-neutral-700">
+<div class="mx-6 mb-8 text-lg font-bold text-neutral-700">
   {formatCurrency(data.production.price_till)} | {formatCurrency(data.production.price_from)}
 </div>
 
-<h2 class="mx-6 mb-3 text-xl text-neutral-700">Termine</h2>
+<h2 class="mx-6 mb-3 text-xl text-neutral-700 ">Termine</h2>
 
 <div
-  class="mx-6 mb-8 grid grid-cols-[1fr_min-content_min-content] gap-x-8 gap-y-2 text-neutral-700"
+  class="mx-6 mb-8 grid grid-cols-[1fr_min-content_min-content] gap-x-15 gap-y-2 text-neutral-700"
 >
   {#each data.production.events as event}
     <div>
