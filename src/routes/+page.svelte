@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { PageProps } from './$types';
-  import { formatStartDate, formatStartTime, getCurrentYearAndMonth } from '$lib/date-times';
+  import { formatStartDate, formatStartTime } from '$lib/date-times';
   import { mainImage } from '$lib/images.svelte';
   import { formatCurrency } from '$lib/currency';
   import { categoryCaption, categoryChip, characteristicChip } from '$lib/chips.svelte';
@@ -11,7 +11,7 @@
 
   const nextEvent = nextProduction.events[0];
 
-  const { year, month } = getCurrentYearAndMonth();
+
 </script>
 
 <div class="relative mb-6 h-80 w-full bg-slate-200">
@@ -68,7 +68,7 @@
 </div>
 
 <a
-  href="/events/{year}/{month}"
+  href="/events"
   class="mx-6 mb-6 block rounded-sm border border-red-900 py-1 text-center text-lg text-red-900"
   >Spielplan</a
 >
