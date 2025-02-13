@@ -2,7 +2,7 @@
   import { categoryChip, characteristicChip } from '$lib/chips.svelte';
   import { formatCurrency } from '$lib/currency';
   import { formatStartDate, formatStartTime } from '$lib/date-times';
-  import type { PageProps } from './$types';
+  import type { PageProps } from '../../../.svelte-kit/types/src/routes';
 
   let { data }: PageProps = $props();
 </script>
