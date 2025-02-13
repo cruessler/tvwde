@@ -1,19 +1,20 @@
 <script lang="ts">
   import { env } from '$env/dynamic/public';
-  import { getCurrentYearAndMonth } from '$lib/date-times';
   import '../app.css';
 
   let { children } = $props();
 
-  const { year, month } = getCurrentYearAndMonth();
+
 </script>
 
 <header class="h-16 bg-neutral-800 p-4">
-  <img
+  <a href="/"><img
     src="{env.PUBLIC_ASSETS_URL}/c9ff1219-9821-4303-9340-39d39d15d089"
     alt="Logo des Theaters Verlängertes Wohnzimmer"
     class="aspect-auto w-[150px] mx-auto]"
+
   />
+  </a>
 </header>
 
 <main class="mb-8">
