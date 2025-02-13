@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { env } from '$env/dynamic/public';
   import { getCurrentYearAndMonth } from '$lib/date-times';
   import '../app.css';
 
@@ -7,9 +8,9 @@
   const { year, month } = getCurrentYearAndMonth();
 </script>
 
-<header class="h-20 bg-slate-700 p-4">
-  <enhanced:img
-    src="$lib/assets/tvw-logo-1536x384.png"
+<header class="h-20 bg-neutral-800 p-4">
+  <img
+    src="{env.PUBLIC_ASSETS_URL}/c9ff1219-9821-4303-9340-39d39d15d089"
     alt="Logo des Theaters Verlängertes Wohnzimmer"
     class="aspect-auto w-[192px]"
   />
