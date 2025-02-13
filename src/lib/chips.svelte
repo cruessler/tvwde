@@ -38,45 +38,45 @@
 
   const categoryStyles = {
     1: 'bg-fuchsia-800',
-    3: 'bg-green-600',
+    3: 'bg-lime-500',
     4: 'bg-green-600',
-    2: 'bg-green-600',
-    6: 'bg-green-600',
-    18: 'bg-green-600',
+    2: 'bg-blue-700',
+    6: 'bg-blue-700',
+    18: 'bg-blue-700',
     5: 'bg-green-600',
-    7: 'bg-green-600',
-    62: 'bg-green-600',
-    86: 'bg-green-600',
-    83: 'bg-green-600',
-    87: 'bg-green-600'
+    7: 'bg-pink-400',
+    62: 'bg-fuchsia-800',
+    86: 'bg-orange-600',
+    83: 'bg-orange-600',
+    87: 'bg-orange-600'
   } satisfies Record<Category, string>;
 
   const categoryCaptionStyles = {
     1: 'bg-fuchsia-800/85',
-    3: 'bg-green-600/85',
+    3: 'bg-lime-500/85',
     4: 'bg-green-600/85',
-    2: 'bg-green-600/85',
-    6: 'bg-green-600/85',
-    18: 'bg-green-600/85',
+    2: 'bg-blue-700/85',
+    6: 'bg-blue-700/85',
+    18: 'bg-blue-700/85',
     5: 'bg-green-600/85',
-    7: 'bg-green-600/85',
-    62: 'bg-green-600/85',
-    86: 'bg-green-600/85',
-    83: 'bg-green-600/85',
-    87: 'bg-green-600/85'
+    7: 'bg-pink-400/85',
+    62: 'bg-fuchsia-800/85',
+    86: 'bg-orange-600/85',
+    83: 'bg-orange-600/85',
+    87: 'bg-orange-600/85'
   } satisfies Record<Category, string>;
 
   export { characteristicChip, categoryChip, categoryCaption };
 </script>
 
 {#snippet characteristicChip(characteristic: Characteristic)}
-  <div class="w-32 rounded-md {characteristicStyles[characteristic]} py-1 text-center text-zinc-50">
+  <div class="w-32 rounded-xl {characteristicStyles[characteristic]} py-1 text-center text-zinc-50">
     {characteristics[characteristic]}
   </div>
 {/snippet}
 
 {#snippet categoryChip(category: Category)}
-  <div class="w-32 rounded-md {categoryStyles[category]} py-1 text-center text-zinc-50">
+  <div class="w-32 rounded-xl {categoryStyles[category]} py-1 text-center text-zinc-50">
     {categories[category]}
   </div>
 {/snippet}

@@ -22,8 +22,8 @@
 
 @theme inline {
   --color-tvw-accent: var(--color-red-900);
-  --color-tvw-primary: var(--color-slate-50);
+  --color-tvw-primary: var(--color-zinc-50);
   --color-tvw-secondary: var(--color-neutral-900);
   --color-tvw-font: var(--color-neutral-900);
-  --color-tvw-font-secondary: var(--color-slate-50);
+  --color-tvw-font-secondary: var(--color-zinc-50);
 }
