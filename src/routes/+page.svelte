@@ -14,7 +14,7 @@
   const { year, month } = getCurrentYearAndMonth();
 </script>
 
-<div class="relative mb-8 h-80 w-full bg-slate-200">
+<div class="relative mb-6 h-80 w-full bg-slate-200">
   <div
     class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-6 py-4 text-xl font-bold text-zinc-50"
   >
@@ -29,7 +29,7 @@
   />
 </div>
 
-<h2 class="mx-6 mb-2 text-xl font-bold text-neutral-700">Unsere nächste Veranstaltung</h2>
+<h2 class="mx-6 mb-4 text-xl font-bold text-neutral-700">Unsere nächste Veranstaltung</h2>
 
 <div class="mx-6 mb-1 text-base text-neutral-700">
   {formatStartDate(nextEvent.start_date, nextEvent.start_time)}
