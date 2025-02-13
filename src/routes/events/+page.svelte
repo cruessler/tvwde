@@ -9,7 +9,7 @@
 
 <div class="relative mb-0 h-80 w-full bg-slate-200">
   <div
-    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-6 py-4 text-2xl font-bold text-zinc-50"
+    class="absolute bottom-15 left-0 line-clamp-2 pr-15 bg-red-900/85 px-6 py-4 text-2xl font-bold text-zinc-50"
   >
     Spielplan bis<br />
     {data.dateReadable}

@@ -5,6 +5,21 @@
   let { data }: PageProps = $props();
 </script>
 
+<div class="relative mb-8 h-80 w-full bg-slate-200">
+  <div
+    class="absolute bottom-15 left-0 line-clamp-2 pr-15 bg-red-900/85 px-6 py-4 text-2xl font-bold text-zinc-50"
+  >
+    Produktionen<br />
+    im Überblick
+  </div>
+
+  <enhanced:img
+    src="$lib/assets/main-image.jpeg"
+    alt="Szene auf der Bühne des Theaters Verlängertes Wohnzimmer: Ein Mann sitzt auf einer dunklen Bühne in einem Sessel im Scheinwerferlicht und wird im Hintergrund von einer Frau auf einer Chaiselongue beobachtet"
+    class="h-full w-full object-cover"
+  />
+</div>
+
 {#each data.productions as production}
   <div class="relative mb-8 h-[320px] w-full bg-slate-200">
     <div
