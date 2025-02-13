@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { PageProps } from './$types';
-  import { formatStartDate, formatStartTime, getEventStartDateTimeParts } from '$lib/date-times';
+  import { formatStartDate, formatStartTime } from '$lib/date-times';
   import { mainImage } from '$lib/images.svelte';
   import { formatCurrency } from '$lib/currency';
 
@@ -13,7 +13,7 @@
 
 <div class="relative mb-8 h-80 w-full bg-slate-200">
   <div
-    class="absolute top-40 left-0 line-clamp-2 max-w-86 bg-red-900/85 px-5 py-4 text-lg font-bold text-white"
+    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-5 py-4 text-lg font-bold text-zinc-50"
   >
     Theater<br />
     Verlängertes Wohnzimmer

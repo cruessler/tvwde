@@ -1,42 +1,54 @@
 <script lang="ts">
-  import { formatStartTime, getEventStartDateTimeParts } from '$lib/date-times';
+  import { formatCurrency } from '$lib/currency';
+  import { formatStartDate, formatStartTime } from '$lib/date-times';
   import type { PageProps } from './$types';
 
   let { data }: PageProps = $props();
 </script>
 
-<h1 class="mx-6 mb-2 text-2xl">{data.monthReadable}</h1>
+<div class="relative mb-8 h-80 w-full bg-slate-200">
+  <div
+    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-5 py-4 text-lg font-bold text-zinc-50"
+  >
+    Spielplan für<br />
+    {data.monthReadable}
+  </div>
+
+  <enhanced:img
+    src="$lib/assets/main-image.jpeg"
+    alt="Szene auf der Bühne des Theaters Verlängertes Wohnzimmer: Ein Mann sitzt auf einer dunklen Bühne in einem Sessel im Scheinwerferlicht und wird im Hintergrund von einer Frau auf einer Chaiselongue beobachtet"
+    class="h-full w-full object-cover"
+  />
+</div>
 
 {#each data.events as event}
-  {@const { weekday, day } = getEventStartDateTimeParts(event.start_date, event.start_time)}
-
-  <div class="mx-6 mb-2 flex flex-row">
-    <div class="flex flex-col items-center text-lg">
-      <div>{weekday}</div>
-      <div class="text-xl font-bold">{day}</div>
-    </div>
-
-    <div class="ml-auto self-center text-2xl">
-      {formatStartTime(event.start_date, event.start_time)}
-      {event.production_id.title_de}
-    </div>
+  <div class="mb-4 bg-red-900 px-6 py-2 text-xl font-bold text-zinc-50">
+    {formatStartDate(event.start_date, event.start_time)}
   </div>
 
-  <div class="mx-6 mb-2 flex flex-row space-x-2">
-    <span class="rounded-sm border-red-200 bg-red-800 px-2 py-1 text-slate-100">Premiere</span>
-    <span class="rounded-sm border-green-200 bg-green-800 px-2 py-1 text-slate-100"
-      >Performance</span
-    >
+  <h1 class="mx-6 mb-4 text-2xl font-bold text-neutral-700">
+    {formatStartTime(event.start_date, event.start_time)}
+
+    <a href="/productions/{event.production_id.id}">{event.production_id.title_de}</a>
+  </h1>
+
+  <div class="mx-6 mb-6 flex flex-row space-x-2">
+    <span class="w-32 rounded-md bg-green-600 py-1 text-center text-zinc-50">Performance</span>
+    <span class="w-32 rounded-md bg-yellow-500 py-1 text-center text-zinc-50">Premiere</span>
   </div>
 
-  <div class="mx-6 mb-2 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
+  <div class="mx-6 mb-8 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
 
-  <div class="mx-6 mb-8 flex flex-row items-center">
-    <div class="text-xl font-bold">10 €–15 €</div>
+  <div class="mx-6 mb-12 flex flex-row items-center">
+    <div class="text-2xl font-bold text-neutral-700">
+      {formatCurrency(event.production_id.price_till)} | {formatCurrency(
+        event.production_id.price_from
+      )}
+    </div>
 
     <a
-      href="#"
-      class="ml-auto rounded-sm border-red-200 bg-red-800 px-4 py-2 text-lg text-slate-100"
+      href="https://example.com/tickets"
+      class="ml-auto block w-40 rounded-sm border border-red-900 px-4 py-1 text-center text-2xl text-red-900"
       >Tickets</a
     >
   </div>
