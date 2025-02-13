@@ -10,7 +10,7 @@
 
 <div class="relative mb-8 h-80 w-full bg-slate-200">
   <div
-    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-5 py-4 text-lg font-bold text-zinc-50"
+    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-6 py-4 text-lg font-bold text-zinc-50"
   >
     {data.production.title_de}
   </div>
