@@ -23,7 +23,7 @@ export const load: PageServerLoad = async () => {
         'price_till',
         'categories',
         { images: ['title_de', 'image'] },
-        { events: ['start_date', 'start_time', 'characteristics'] }
+        { events: ['start_date', 'start_time', 'characteristics', 'tickets_website'] }
       ],
       limit: 3
     })

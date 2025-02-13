@@ -36,6 +36,7 @@ export const load: PageServerLoad = async ({ params }) => {
         'start_date',
         'start_time',
         'characteristics',
+        'tickets_website',
         {
           production_id: [
             'id',

@@ -53,7 +53,7 @@
     </div>
 
     <a
-      href="https://example.com/tickets"
+      href={event.tickets_website}
       class="ml-auto block w-40 rounded-sm border border-red-900 px-4 py-1 text-center text-2xl text-red-900"
       >Tickets</a
     >

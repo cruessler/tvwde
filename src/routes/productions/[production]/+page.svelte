@@ -52,7 +52,7 @@
       {formatStartTime(event.start_date, event.start_time)}
     </div>
 
-    <a href="https://example.com/tickets" class="underline">Tickets</a>
+    <a href={event.tickets_website} class="underline">Tickets</a>
   {/each}
 </div>
 
