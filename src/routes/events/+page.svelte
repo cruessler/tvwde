@@ -55,7 +55,7 @@
 
     <a
       href={event.tickets_website}
-      class="ml-auto block w-50 rounded-sm bg-red-900 px-4 py-1 text-center text-xl text-zinc-50"
+      class="ml-auto block w-40 rounded-sm bg-red-900 px-4 py-1 text-center text-xl text-zinc-50"
       >Tickets</a
     >
   </div>
