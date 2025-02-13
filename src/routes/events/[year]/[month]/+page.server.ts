@@ -8,20 +8,21 @@ export const load: PageServerLoad = async ({ params }) => {
   const year = Number(params.year);
   const month = Number(params.month) - 1;
 
-  const startOfMonth = new Date();
-  startOfMonth.setFullYear(year, month, 1);
-  const endOfMonth = new Date();
-  endOfMonth.setFullYear(year, month + 1, 0);
+  const currentDate = new Date();
 
-  const monthReadable = new Intl.DateTimeFormat(['de-DE'], {
+  const futureSixWeeks = new Date();
+  futureSixWeeks.setDate(futureSixWeeks.getDate() + 6 * 7);
+
+  const dateReadable = new Intl.DateTimeFormat(['de-DE'], {
     year: 'numeric',
-    month: 'long'
-  }).format(startOfMonth);
+    month: 'long',
+    day: 'numeric'
+  }).format(futureSixWeeks);
 
   const events = await directus.request(
     readItems('events', {
       filter: {
-        start_date: { _between: [startOfMonth.toDateString(), endOfMonth.toDateString()] },
+        start_date: { _between: [currentDate.toDateString(), futureSixWeeks.toDateString()] },
         // 2025-02-08
         // I expected this to be `production`, but apparently Directus does not
         // automatically map column names to objects that way.
@@ -51,5 +52,5 @@ export const load: PageServerLoad = async ({ params }) => {
     })
   );
 
-  return { events, monthReadable };
+  return { events, monthReadable: dateReadable };
 };
