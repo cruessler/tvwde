@@ -27,13 +27,13 @@
     {formatStartDate(event.start_date, event.start_time)}
   </div>
 
-  <h1 class="mx-6 mb-4 text-2xl font-bold text-neutral-700">
+  <h1 class="mx-6 mb-2 text-2xl font-bold text-neutral-700">
     {formatStartTime(event.start_date, event.start_time)}
 
     <a href="/productions/{event.production_id.id}" class="mx-2" >{event.production_id.title_de}</a>
   </h1>
 
-  <div class="mx-6 mb-4 text-sm flex flex-row flex-wrap space-y-1 space-x-2">
+  <div class="mx-6 mb-2 text-sm flex flex-row flex-wrap space-y-1 space-x-2">
     {#each event.characteristics as characteristic}
       {@render characteristicChip(characteristic)}
     {/each}
@@ -43,7 +43,7 @@
     {/each}
   </div>
 
-  <div class="mx-6 mb-6 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
+  <div class="mx-6 mb-3 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
 
   <div class="mx-6  flex flex-row items-center ">
     <div class="text-lg font-bold text-neutral-700">
@@ -59,5 +59,5 @@
       >Tickets</a
     >
   </div>
-  <div class="mb-3 border-b-2 border-b-neutral-700 pb-6 ml-3 mr-3"></div>
+  <div class="mb-3 border-b-1 border-b-neutral-700 pb-6 ml-4 mr-5"></div>
 {/each}
