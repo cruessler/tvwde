@@ -50,5 +50,5 @@ export const load: PageServerLoad = async () => {
     })
   );
 
-  return { events, monthReadable: dateReadable };
+  return { events, dateReadable: dateReadable };
 };
