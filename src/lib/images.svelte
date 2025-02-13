@@ -9,7 +9,7 @@
     <img
       src="{env.PUBLIC_ASSETS_URL}/{image.image}"
       alt={image.title_de}
-      class="h-40 w-full object-cover"
+      class="h-full w-full object-cover"
     />
   {:else}{/if}
 {/snippet}

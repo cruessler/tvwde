@@ -6,7 +6,7 @@
 </script>
 
 {#each data.productions as production}
-  <div class="relative mb-8 h-40 w-full bg-slate-200">
+  <div class="relative mb-8 h-[320px] w-full bg-slate-200">
     <div
       class="absolute bottom-0 left-0 bg-red-600 px-2 py-1 text-lg font-bold text-slate-100 opacity-80"
     >

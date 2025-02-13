@@ -19,7 +19,7 @@
   {@render children()}
 </main>
 
-<footer class="w-[100vw] bg-slate-700 p-2 text-slate-50">
+<footer class="w-[100vw] bg-neutral-800 px-6 py-2 text-zinc-50">
   <menu class="mb-4 grid grid-cols-2 space-y-1">
     <li class="row-start-1"><a href="/">Home</a></li>
     <li class="row-start-2"><a href="/events/{year}/{month}">Spielplan</a></li>

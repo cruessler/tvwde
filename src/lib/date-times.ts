@@ -1,3 +1,13 @@
+export const formatStartDate = (startDate: string, startTime: string) => {
+  const startDateTime = new Date(`${startDate}T${startTime}`);
+
+  return new Intl.DateTimeFormat(['de-DE'], {
+    month: 'long',
+    weekday: 'long',
+    day: 'numeric'
+  }).format(startDateTime);
+};
+
 export const formatStartDateTime = (startDate: string, startTime: string) => {
   const startDateTime = new Date(`${startDate}T${startTime}`);
 

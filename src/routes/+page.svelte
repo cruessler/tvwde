@@ -13,9 +13,9 @@
   );
 </script>
 
-<div class="relative mb-8 h-40 w-full bg-slate-200">
+<div class="relative mb-8 h-80 w-full bg-slate-200">
   <div
-    class="absolute bottom-5 bg-red-600 py-4 pr-4 pl-2 text-lg font-bold text-slate-100 opacity-80"
+    class="absolute top-40 left-0 line-clamp-2 max-w-86 bg-red-900/85 px-5 py-4 text-lg font-bold text-white"
   >
     Theater Verlängertes Wohnzimmer
   </div>
