@@ -52,31 +52,33 @@
   } satisfies Record<Category, string>;
 
   const categoryCaptionStyles = {
-    1: 'bg-fuchsia-800/85',
-    3: 'bg-lime-500/85',
-    4: 'bg-green-600/85',
-    2: 'bg-blue-700/85',
-    6: 'bg-blue-700/85',
-    18: 'bg-blue-700/85',
-    5: 'bg-green-600/85',
-    7: 'bg-pink-400/85',
-    62: 'bg-fuchsia-800/85',
-    86: 'bg-orange-600/85',
-    83: 'bg-orange-600/85',
-    87: 'bg-orange-600/85'
+    1: 'bg-fuchsia-800/90',
+    3: 'bg-lime-500/90',
+    4: 'bg-green-600/90',
+    2: 'bg-blue-700/90',
+    6: 'bg-blue-700/90',
+    18: 'bg-blue-700/90',
+    5: 'bg-green-600/90',
+    7: 'bg-pink-400/90',
+    62: 'bg-fuchsia-800/90',
+    86: 'bg-orange-600/90',
+    83: 'bg-orange-600/90',
+    87: 'bg-orange-600/90'
   } satisfies Record<Category, string>;
 
   export { characteristicChip, categoryChip, categoryCaption };
 </script>
 
 {#snippet characteristicChip(characteristic: Characteristic)}
-  <div class="w-32 rounded-xl {characteristicStyles[characteristic]} py-1 text-center text-zinc-50">
+  <div
+    class="w-32 rounded-full {characteristicStyles[characteristic]} py-0.5 text-center text-zinc-50"
+  >
     {characteristics[characteristic]}
   </div>
 {/snippet}
 
 {#snippet categoryChip(category: Category)}
-  <div class="w-32 rounded-xl {categoryStyles[category]} py-1 text-center text-zinc-50">
+  <div class="w-32 rounded-full {categoryStyles[category]} py-0.5 text-center text-zinc-50">
     {categories[category]}
   </div>
 {/snippet}
@@ -85,7 +87,7 @@
   <div
     class="absolute bottom-0 left-0 {categoryCaptionStyles[
       category
-    ]} px-8 py-2 text-lg font-bold text-slate-100 opacity-80"
+    ]} px-6 py-2 text-lg font-bold text-slate-100 opacity-80"
   >
     {categories[category]}
   </div>
