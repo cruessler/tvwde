@@ -7,7 +7,7 @@
   let { data }: PageProps = $props();
 </script>
 
-<div class="relative mb-0 h-80 w-full bg-slate-200">
+<div class="relative mb-2 h-80 w-full bg-slate-200">
   <div
     class="absolute bottom-15 left-0 line-clamp-2 pr-15 bg-red-900/85 px-6 py-4 text-2xl font-bold text-zinc-50"
   >
@@ -23,10 +23,9 @@
 </div>
 
 {#each data.events as event}
-  <div class="mb-2 mr-3 ml-3  border-t-neutral-700 px-3 py-2  text-lg  text-neutral-700">
+  <div class="mb-2 mr-6 ml-6 border-b-1 border-b-neutral-700 border-t-neutral-700 px-0 py-0 pt-2  text-lg  text-neutral-700">
     {formatStartDate(event.start_date, event.start_time)}
   </div>
-
   <h1 class="mx-6 mb-2 text-2xl font-bold text-neutral-700">
     {formatStartTime(event.start_date, event.start_time)}
 
@@ -55,9 +54,9 @@
 
     <a
       href={event.tickets_website}
-      class="ml-auto block w-40 rounded-sm bg-red-900 px-4 py-1 text-center text-xl text-zinc-50"
+      class="ml-auto mb-4 block w-40 rounded-sm bg-red-900 px-4 py-1 text-center text-xl text-zinc-50"
       >Tickets</a
     >
   </div>
-  <div class="mb-3 border-b-1 border-b-neutral-700 pb-6 ml-4 mr-5"></div>
+
 {/each}
