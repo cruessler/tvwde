@@ -6,7 +6,7 @@ export const load: PageServerLoad = async ({ params }) => {
   const directus = createDirectus(env.API_URL).with(staticToken(env.API_TOKEN)).with(rest());
 
   const type = await directus.request(
-    readItem('pages', params.type, {
+    readItem('pages', params.pageID, {
       filter: { status: { _eq: 'published' } },
       fields: [
         'title',
