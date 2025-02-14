@@ -1,0 +1,22 @@
+import { createDirectus, rest, staticToken, readItem } from '@directus/sdk';
+import { env } from '$env/dynamic/private';
+import type { PageServerLoad } from './$types';
+
+export const load: PageServerLoad = async ({ params }) => {
+  const directus = createDirectus(env.API_URL).with(staticToken(env.API_TOKEN)).with(rest());
+
+  const type = await directus.request(
+    readItem('pages', params.type, {
+      filter: { status: { _eq: 'published' } },
+      fields: [
+        'title',
+        'content',
+        'image'
+      ]
+    })
+  );
+
+  return {
+    type
+  };
+};

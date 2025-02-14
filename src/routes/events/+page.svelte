@@ -42,7 +42,7 @@
     {/each}
   </div>
 
-  <div class="mx-6 mb-3 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
+  <div class="mx-6 mb-3 line-clamp-3 whitespace-pre-line ">{event.production_id.description_de}</div>
 
   <div class="mx-6  flex flex-row items-center ">
     <div class="text-lg font-bold text-neutral-700">
