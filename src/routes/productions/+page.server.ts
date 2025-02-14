@@ -14,6 +14,7 @@ export const load: PageServerLoad = async () => {
         'title_de',
         'description_de',
         'date_created',
+        'categories',
         { images: ['title_de', 'image'] },
         { events: ['start_date', 'start_time'] }
       ]
