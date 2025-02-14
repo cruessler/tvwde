@@ -52,18 +52,18 @@
   } satisfies Record<Category, string>;
 
   const categoryCaptionStyles = {
-    1: 'bg-fuchsia-800/85',
-    3: 'bg-lime-500/85',
-    4: 'bg-green-600/85',
-    2: 'bg-blue-700/85',
-    6: 'bg-blue-700/85',
-    18: 'bg-blue-700/85',
-    5: 'bg-green-600/85',
-    7: 'bg-pink-400/85',
-    62: 'bg-fuchsia-800/85',
-    86: 'bg-orange-600/85',
-    83: 'bg-orange-600/85',
-    87: 'bg-orange-600/85'
+    1: 'bg-fuchsia-800/90',
+    3: 'bg-lime-500/90',
+    4: 'bg-green-600/90',
+    2: 'bg-blue-700/90',
+    6: 'bg-blue-700/90',
+    18: 'bg-blue-700/90',
+    5: 'bg-green-600/90',
+    7: 'bg-pink-400/90',
+    62: 'bg-fuchsia-800/90',
+    86: 'bg-orange-600/90',
+    83: 'bg-orange-600/90',
+    87: 'bg-orange-600/90'
   } satisfies Record<Category, string>;
 
   export { characteristicChip, categoryChip, categoryCaption };

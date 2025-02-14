@@ -24,7 +24,7 @@
 
 
 <a
-  href="/productions"
-  class="mx-6 block rounded-sm bg-red-900 px-4 py-2 text-center text-2xl text-zinc-50"
-  >Weitere Produktionen</a
+  href="/"
+  class="mx-6 block rounded-sm bg-red-900 px-4 py-2 text-center text-xl text-zinc-50"
+  >Home</a
 >

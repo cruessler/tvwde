@@ -73,10 +73,10 @@
   >Spielplan</a
 >
 
-<h2 class="mx-6 mb-4 text-2xl ">Produktionen im Fokus</h2>
+<h2 class="mx-6 mb-4 text-2xl border-b-1 border-neutral-700">Produktionen im Fokus</h2>
 
 {#each data.productions as production}
-  <div class="relative mb-4 h-50 w-full bg-slate-200">
+  <div class="relative mb-4 h-50 mr-6 ml-6 bg-slate-200">
     {@render categoryCaption(production.categories[0])}
 
     {@render mainImage(production.images?.[0])}
