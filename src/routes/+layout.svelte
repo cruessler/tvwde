@@ -1,11 +1,8 @@
 <script lang="ts">
   import { env } from '$env/dynamic/public';
-  import { getCurrentYearAndMonth } from '$lib/date-times';
   import '../app.css';
 
   let { children } = $props();
-
-  const { year, month } = getCurrentYearAndMonth();
 </script>
 
 <header class="sticky top-0 z-50 h-16 bg-neutral-800 px-6 py-3">
@@ -25,7 +22,7 @@
 <footer class="w-[100vw] bg-neutral-800 px-6 py-2 text-zinc-50">
   <menu class="mb-4 grid grid-cols-2 space-y-1">
     <li class="row-start-1"><a href="/">Home</a></li>
-    <li class="row-start-2"><a href="/events/{year}/{month}">Spielplan</a></li>
+    <li class="row-start-2"><a href="/events">Spielplan</a></li>
     <li class="row-start-3"><a href="/productions">Produktionen</a></li>
     <li class="row-start-4">Nachwuchsförderung</li>
     <li class="row-start-5">Über uns</li>

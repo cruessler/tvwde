@@ -7,12 +7,12 @@
   let { data }: PageProps = $props();
 </script>
 
-<div class="relative mb-8 h-80 w-full bg-slate-200">
+<div class="relative mb-2 h-80 w-full bg-slate-200">
   <div
-    class="absolute bottom-15 left-0 line-clamp-2 w-86 bg-red-900/85 px-6 py-4 text-lg font-bold text-zinc-50"
+    class="absolute bottom-15 left-0 line-clamp-2 bg-red-900/85 py-4 pr-15 pl-6 text-2xl font-bold text-zinc-50"
   >
-    Spielplan für<br />
-    {data.monthReadable}
+    Spielplan bis<br />
+    {data.dateReadable}
   </div>
 
   <enhanced:img
@@ -23,17 +23,18 @@
 </div>
 
 {#each data.events as event}
-  <div class="mb-4 border-t-2 border-t-neutral-700 px-6 py-2 text-xl font-bold text-neutral-700">
+  <div
+    class="mb-2 border-b-2 border-t-neutral-700 border-b-neutral-700 px-6 pt-2 text-lg text-neutral-700"
+  >
     {formatStartDate(event.start_date, event.start_time)}
   </div>
-
-  <h1 class="mx-6 mb-4 text-2xl font-bold text-neutral-700">
+  <h1 class="mx-6 mb-2 text-2xl font-bold text-neutral-700">
     {formatStartTime(event.start_date, event.start_time)}
 
-    <a href="/productions/{event.production_id.id}">{event.production_id.title_de}</a>
+    <a href="/productions/{event.production_id.id}" class="mx-2">{event.production_id.title_de}</a>
   </h1>
 
-  <div class="mx-6 mb-6 flex flex-row flex-wrap space-y-1 space-x-2">
+  <div class="mx-6 mb-2 flex flex-row flex-wrap space-y-1 space-x-2 text-sm">
     {#each event.characteristics as characteristic}
       {@render characteristicChip(characteristic)}
     {/each}
@@ -43,18 +44,18 @@
     {/each}
   </div>
 
-  <div class="mx-6 mb-8 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
+  <div class="mx-6 mb-3 line-clamp-3 whitespace-pre-line">{event.production_id.description_de}</div>
 
-  <div class="mx-6 mb-12 flex flex-row items-center">
-    <div class="text-2xl font-bold text-neutral-700">
-      {formatCurrency(event.production_id.price_till)} | {formatCurrency(
-        event.production_id.price_from
-      )}
+  <div class="mx-6 flex flex-row items-center">
+    <div class="space-x-1 text-lg font-bold text-neutral-700">
+      {formatCurrency(event.production_id.price_till)}
+      <span class="font-light">|</span>
+      {formatCurrency(event.production_id.price_from)}
     </div>
 
     <a
       href={event.tickets_website}
-      class="ml-auto block w-40 rounded-sm bg-red-900 px-4 py-1 text-center text-2xl text-zinc-50"
+      class="ml-auto block w-40 rounded-sm bg-red-900 px-4 py-1 text-center text-xl text-zinc-50"
       >Tickets</a
     >
   </div>
