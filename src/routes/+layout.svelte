@@ -7,7 +7,7 @@
 
 </script>
 
-<header class="h-16 bg-neutral-800 p-4">
+<header class="sticky h-16 top-0 z-50  bg-neutral-800 p-3 ">
   <a href="/"><img
     src="{env.PUBLIC_ASSETS_URL}/c9ff1219-9821-4303-9340-39d39d15d089"
     alt="Logo des Theaters Verlängertes Wohnzimmer"
