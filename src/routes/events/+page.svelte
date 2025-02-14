@@ -23,7 +23,7 @@
 </div>
 
 {#each data.events as event}
-  <div class="mb-2 mr-6 ml-6 border-b-1 border-b-neutral-700 border-t-neutral-700 px-0 py-0 pt-2  text-lg  text-neutral-700">
+  <div class="mb-2 pr-6 pl-6 border-b-2 border-b-neutral-700 border-t-neutral-700 px-0 py-0 pt-2  text-lg  text-neutral-700">
     {formatStartDate(event.start_date, event.start_time)}
   </div>
   <h1 class="mx-6 mb-2 text-2xl font-bold text-neutral-700">
