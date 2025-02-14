@@ -38,10 +38,10 @@
   {formatCurrency(data.production.price_till)} | {formatCurrency(data.production.price_from)}
 </div>
 
-<h2 class="mx-6 mb-3 text-xl text-neutral-700 ">Termine</h2>
+<h2 class="mx-6 mb-3 text-xl border-b-1 border-b-neutral-700 text-neutral-700 ">Termine</h2>
 
 <div
-  class="mx-6 mb-8 grid grid-cols-[1fr_min-content_min-content] gap-x-15 gap-y-2 text-neutral-700"
+  class="mx-6 mb-8 grid grid-cols-[1fr_min-content_min-content] gap-x-10 gap-y-2 text-neutral-700"
 >
   {#each data.production.events as event}
     <div>
@@ -56,7 +56,7 @@
   {/each}
 </div>
 
-<h2 class="mx-6 mb-3 text-xl text-neutral-700">Ensemble</h2>
+<h2 class="mx-6 mb-3 text-xl border-b-1 border-b-neutral-700  text-neutral-700">Ensemble</h2>
 
 <div class="mx-6 mb-10 grid grid-cols-[1fr_max-content] gap-x-8 gap-y-1 text-neutral-700">
   <div>Regie</div>
